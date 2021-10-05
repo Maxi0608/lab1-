@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+
+namespace laboratory1
+{
+    class TestCompetition
+    {
+        public static void LoadTestCompetition()
+        {
+            Competition pCompetition1 = new Competition()
+            {
+         PCountryName = "Россия",
+         PTeamName = "Aнанас",
+         PFirstName = "Максим",
+         PLastName = "Кузьменко",
+         PMiddleName = "Александрович",
+         NId = 23,
+         NAge = 19,
+         NHight = 171,
+         NWeight = 50
+    };
+
+        Competition pCompetition2 = new Competition()
+            {
+         PCountryName = "Укрaина",
+         PTeamName = "Aрбуз",
+         PFirstName = "Роман",
+         PLastName = "Калабеков",
+         PMiddleName = "Александрович",
+         NId = 10,
+         NAge = 19,
+         NHight = 192,
+         NWeight = 100
+            };
+            ShowCompetitionObject("pCompetition1", pCompetition1);
+            ShowCompetitionObject("pCompetition2", pCompetition2);
+            CompareCompetitionObject(pCompetition1, pCompetition2);
+        }
+
+        private static void ShowCompetitionObject(string pLabel,
+            Competition pCmp)
+        {
+            Console.WriteLine("----{0}----", pLabel);
+            Console.WriteLine("ToString() = {0}", pCmp.ToString());
+            Console.WriteLine("GetHashCode = {0}",
+                pCmp.GetHashCode());
+            Console.WriteLine("GetType() = {0}", pCmp.GetType());
+            Console.WriteLine("-----------------------");
+        }
+
+        private static void CompareCompetitionObject(Competition pCmp1,
+            Competition pCmp2)
+        {
+            Console.WriteLine("Equals() = {0}",
+                pCmp1.Equals(pCmp2));
+        }
+       
+    }
+
+}
+

@@ -1,0 +1,13 @@
+using System;
+
+namespace laboratory1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            TestCompetition.LoadTestCompetition();
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace laboratory1 { 
+    class Competition
+    {
+        private string pCountryName;
+        private string pTeamName;
+        private string pFirstName;
+        private string pLastName;
+        private string pMiddleName;
+        private int nId;
+        private int nAge;
+        private int nHight;
+        private int nWeight;
+       
+        public string PCountryName
+        {
+            get { return pCountryName; }
+            set { pCountryName = value; }
+        }
+        public string PTeamName
+        {
+            get { return pTeamName; }
+            set { pTeamName = value; }
+        }
+        public string PFirstName
+        {
+            get { return pFirstName; }
+            set { pFirstName = value; }
+        }
+        public string PLastName
+        {
+            get { return pLastName; }
+            set { pLastName = value; }
+        }
+        public string PMiddleName
+        {
+            get { return pMiddleName; }
+            set { pMiddleName = value; }
+        }
+        public int NId
+        {
+            get { return nId; }
+            set { nId = value; }
+        }
+        public int NAge
+        {
+            get { return nAge; }
+            set { nAge = value; }
+        }
+        public int NHight
+        {
+            get { return nHight; }
+            set { nHight = value; }
+        }
+        public int NWeight
+        {
+            get { return nWeight; }
+            set { nWeight = value; }
+        }
+        public override string ToString()
+        {
+            return string.Format("Фамилия: {0} Имя: {1}", pLastName, pFirstName);
+        }
+        public override bool Equals(object obj)
+        {
+            Competition pCmp = (Competition)obj;
+            return (pCmp.PCountryName == PCountryName);
+        }
+        public override int GetHashCode()
+        {
+            return NId;
+        }
+    }  
+}
